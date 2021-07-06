@@ -1,0 +1,15 @@
+{
+  "name": "fab",
+  "version": "1.0.0",
+  "description": "fab db ",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test",
+    "start": "node index.js"
+  },
+  "author": "sloont",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
+}
