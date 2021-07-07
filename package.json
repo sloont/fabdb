@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run test",
-    "createcardlist": "rm data/cards.json | touch data/cards.json | node index.js"
+    "createcardlist": "rm data/cards.json | touch data/cards.json | node index.js",
+    "getallcards": "node getAllCards.js"
   },
   "author": "sloont",
   "license": "ISC",
   "dependencies": {
     "node-fetch": "^2.6.1"
-  }
+  },
+  "type":"commonjs"
 }

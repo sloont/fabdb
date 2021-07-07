@@ -16,7 +16,7 @@ const writeToFile = async (json) => {
 const populateData = async () => {
     let results = await fetch(BASE_URL);
     let json = await results.json();
-    cards.push(json.data);
+    json.data.forEach(card => cards.push(card));
     
     const lastPage = json.meta.last_page;
     console.log(lastPage + " pages of data to fetch 1/" + lastPage);
@@ -25,16 +25,14 @@ const populateData = async () => {
         results = await fetch(BASE_URL + `?page=${i}`);
         json = await results.json();
         console.log(lastPage + " pages of data to fetch " + i + "/" + lastPage);
-        cards.push(json.data);
+        json.data.forEach(card => cards.push(card));
     }
 
     console.log("\n\n Finished fetching " + lastPage + " pages of data. \n\nWriting to file...");
     await writeToFile(JSON.stringify(cards, null, 4));
 
-    console.log("Finished.");
+    console.log("Finished.\n\n");
+    console.log(cards.length + " cards contained as an array of objects in data/cards.json!");
 }
 
 populateData();
-
-
-// + 
