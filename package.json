@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run test",
-    "start": "node index.js"
+    "start": "touch data/cards.json | node index.js"
   },
   "author": "sloont",
   "license": "ISC",
