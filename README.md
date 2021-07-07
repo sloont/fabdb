@@ -1,6 +1,6 @@
 # fabdb
 
-- ```npm create card list``` will both run index.js after deleting old data/cards.json file then creating a new one.
+- ```npm createcardlist``` will both run index.js after deleting old data/cards.json file then creating a new one.
 
 - The current size of the card database is more than 900 cards and growing. This requests 32 pages of cards from the fabdb.net/api.
 
